@@ -2,7 +2,8 @@ import java.io.*;
 import java.net.*;
 
 public class ServidorSocket {
-    private static final int PUERTO = 8080;
+
+    private static final int PUERTO = 8888;
 
     public static void main(String[] args) {
         try (ServerSocket serverSocket = new ServerSocket(PUERTO)) {
@@ -18,7 +19,13 @@ public class ServidorSocket {
                     // Recibir mensaje del cliente
                     String mensajeCliente = in.readLine();
                     System.out.println("Mensaje recibido: " + mensajeCliente);
+
+                    int num = Integer.parseInt(mensajeCliente);
+                    num++;
+                    out.println(num+"");
                     
+
+
                     // Enviar respuesta
                     out.println("Servidor recibió: " + mensajeCliente);
                     

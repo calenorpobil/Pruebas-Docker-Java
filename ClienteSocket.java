@@ -3,7 +3,7 @@ import java.net.*;
 
 public class ClienteSocket {
     private static final String SERVIDOR_IP = "localhost";
-    private static final int PUERTO = 9090;
+    private static final int PUERTO = 8888;
 
     public static void main(String[] args) {
         try (Socket socket = new Socket(SERVIDOR_IP, PUERTO);
